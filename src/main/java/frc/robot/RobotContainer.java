@@ -19,11 +19,7 @@ import frc.robot.subsystems.shooter.Shooter;
 import frc.robot.subsystems.shooter.hood;
 import frc.robot.subsystems.shooter.Commands.RunFeed;
 import frc.robot.subsystems.shooter.Commands.RunLaunch;
-import frc.robot.subsystems.index.Index.*;
-import frc.robot.subsystems.index.IndexConstants;
 import frc.robot.subsystems.index.IndexIOTalonSRX;
-
-
 
 public class RobotContainer {
   
@@ -60,10 +56,6 @@ public class RobotContainer {
 
     controller.leftBumper().whileTrue(new RunIntake(intake, -1));
     controller.leftBumper().whileTrue(new RunFeed(shooter, -1));
-
-
-
-
   }
 
   public Command getAutonomousCommand() {

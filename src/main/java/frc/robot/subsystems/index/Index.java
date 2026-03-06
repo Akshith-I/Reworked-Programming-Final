@@ -18,10 +18,4 @@ public class Index extends SubsystemBase{
   
     }
 
-    public void periodic() {
-
-        
-
-    }
-
 }

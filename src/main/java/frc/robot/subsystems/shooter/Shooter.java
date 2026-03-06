@@ -3,7 +3,6 @@ package frc.robot.subsystems.shooter;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix6.configs.TalonFXConfiguration;
-import com.ctre.phoenix6.controls.Follower;
 import com.ctre.phoenix6.hardware.TalonFX;
 
 import edu.wpi.first.wpilibj.PneumaticHub;
@@ -47,7 +46,7 @@ public class Shooter {
 
     public double getLaunchingSpeed() {
 
-        return (leftLaunch.get() + rightLaunch.get());
+        return ((leftLaunch.get() + rightLaunch.get())/2);
 
     }
 

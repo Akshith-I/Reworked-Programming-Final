@@ -3,10 +3,6 @@ package frc.robot.subsystems.index;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
-import edu.wpi.first.wpilibj.PneumaticHub;
-import edu.wpi.first.wpilibj.Solenoid;
-import edu.wpi.first.wpilibj.motorcontrol.Talon;
-import frc.robot.subsystems.index.IndexConstants.*;
 
 public class IndexIOTalonSRX implements IndexIO{
     
