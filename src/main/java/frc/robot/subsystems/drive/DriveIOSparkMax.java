@@ -14,7 +14,7 @@ public class DriveIOSparkMax implements DriveIO {
     public SparkMax backLeft;
     public SparkMax backRight;
 
-    public void DriveTrainIOSparkMax(int fl, int fr, int bl, int br) {
+    public DriveIOSparkMax(int fl, int fr, int bl, int br) {
 
         frontLeft = new SparkMax(fl, MotorType.kBrushless);
         frontRight = new SparkMax(fr, MotorType.kBrushless);
