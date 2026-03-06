@@ -23,21 +23,29 @@ public class DriveIOSparkMax implements DriveIO {
 
         SparkMaxConfig rightConfig = new SparkMaxConfig();
         SparkMaxConfig leftConfig = new SparkMaxConfig();
+        SparkMaxConfig rightFrontConfig = new SparkMaxConfig();
+        SparkMaxConfig leftFrontConfig = new SparkMaxConfig();
 
         rightConfig.idleMode(IdleMode.kCoast);
         leftConfig.idleMode(IdleMode.kCoast);
+        rightFrontConfig.idleMode(IdleMode.kCoast);
+        leftFrontConfig.idleMode(IdleMode.kCoast);
 
         rightConfig.smartCurrentLimit(50);
         leftConfig.smartCurrentLimit(50);
+        rightFrontConfig.smartCurrentLimit(50);
+        leftFrontConfig.smartCurrentLimit(50);
 
         rightConfig.inverted(false);
         leftConfig.inverted(true);
+        rightFrontConfig.inverted(false);
+        leftFrontConfig.inverted(true);
 
         rightConfig.follow(frontRight);
         leftConfig.follow(frontLeft);
 
-        frontLeft.configure(leftConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
-        frontRight.configure(leftConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
+        frontLeft.configure(leftFrontConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
+        frontRight.configure(rightFrontConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
         backLeft.configure(rightConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
         backRight.configure(rightConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
         

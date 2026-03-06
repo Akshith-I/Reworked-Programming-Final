@@ -18,10 +18,12 @@ public class Intake extends SubsystemBase {
     public Intake(PneumaticHub hub) {
 
         intake = hub.makeSolenoid(feederSolenoid);
+
+        
         
         frontRoller.configFactoryDefault();
 
-        intake.set(false);
+        intake.set(true);
 
     }   
 
