@@ -48,11 +48,11 @@ public class RobotContainer {
             () -> controller.getLeftY()));
 
     controller.x().whileTrue(new RunIntake(intake, 1));
-    controller.b().whileTrue(new SetIntake(intake, true));
+    controller.b().toggleOnTrue(new SetIntake(intake, true));
     controller.rightTrigger(0.5).whileTrue(new RunFeed(shooter, 1));
     controller.y().whileTrue(new RunLaunch(shooter, 1));
     controller.y().whileTrue(index.setVolts(1.0));
-    controller.povUp().whileTrue(new hood(shooter));
+    controller.povUp().toggleOnTrue(new hood(shooter));
 
     controller.leftBumper().whileTrue(new RunIntake(intake, -1));
     controller.leftBumper().whileTrue(new RunFeed(shooter, -1));

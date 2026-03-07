@@ -2,7 +2,7 @@ package frc.robot.subsystems.drive;
 
 public class DriveConstants {
     
-    public static final double maxSpeed = 0.4;
+    public static final double maxSpeed = 0;
     
     public static final int FRONT_LEFT_ID = 1;
     public static final int FRONT_RIGHT_ID = 2;

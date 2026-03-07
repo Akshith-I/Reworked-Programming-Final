@@ -3,10 +3,6 @@ package frc.robot.subsystems.drive;
 import java.util.function.DoubleSupplier;
 
 import edu.wpi.first.math.MathUtil;
-import edu.wpi.first.math.geometry.Pose2d;
-import edu.wpi.first.math.geometry.Rotation2d;
-import edu.wpi.first.math.kinematics.DifferentialDriveOdometry;
-import edu.wpi.first.wpilibj.smartdashboard.Field2d;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -36,13 +32,12 @@ public class Drive extends SubsystemBase {
     public Command arcadeDrive(DoubleSupplier xSpeedDoubleSupplier, DoubleSupplier zRotationSupplier) {
 
         return new RunCommand(() -> {
+            
+            
             this.arcadeDrive(xSpeedDoubleSupplier.getAsDouble(), zRotationSupplier.getAsDouble());
         }, this);
 
     }
 
-    public void periodic() {
-
-    }
 
 }

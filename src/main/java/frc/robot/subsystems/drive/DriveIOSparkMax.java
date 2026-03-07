@@ -26,10 +26,10 @@ public class DriveIOSparkMax implements DriveIO {
         SparkMaxConfig rightFrontConfig = new SparkMaxConfig();
         SparkMaxConfig leftFrontConfig = new SparkMaxConfig();
 
-        rightConfig.idleMode(IdleMode.kCoast);
-        leftConfig.idleMode(IdleMode.kCoast);
-        rightFrontConfig.idleMode(IdleMode.kCoast);
-        leftFrontConfig.idleMode(IdleMode.kCoast);
+        rightConfig.idleMode(IdleMode.kBrake);
+        leftConfig.idleMode(IdleMode.kBrake);
+        rightFrontConfig.idleMode(IdleMode.kBrake);
+        leftFrontConfig.idleMode(IdleMode.kBrake);
 
         rightConfig.smartCurrentLimit(50);
         leftConfig.smartCurrentLimit(50);
